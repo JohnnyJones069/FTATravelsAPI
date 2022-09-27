@@ -1,0 +1,1146 @@
+{
+	"info": {
+		"_postman_id": "c00d7924-5653-4134-85d6-62b6af4914cc",
+		"name": "FTATravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "About",
+			"item": [
+				{
+					"name": "Hent about",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/about",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"about"
+							]
+						},
+						"description": "Henter about - der er kun 1 document"
+					},
+					"response": []
+				},
+				{
+					"name": "Ret about (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Rejsebureau for entusiaster",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "<p><span style=\"color:#c0392b;font-weight: bold\">FTA Travels</span> er et rejsebureau for entusiaster. Gennem &aring;rene har vi sendt tusinder af Formel 1-fans p&aring; deres livs oplevelse. Vi leverer en fuld rejsepakke med fly, transfers, hotel, og de bedste tribunepladser p&aring; banerne i hele verden.</p>",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Marianne/Eksamensprojekter og EKSAMEN/Webudvikler - hovedforløb/FTA Travels - EksApril2022/FTA Travels - EksApril2022/Info/Billeder/about.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5099/about/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"about",
+								"admin"
+							]
+						},
+						"description": "Retter i data i about"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contactinformation",
+			"item": [
+				{
+					"name": "Hent contactinformation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/contactinformation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"contactinformation"
+							]
+						},
+						"description": "Henter about - der er kun 1 document"
+					},
+					"response": []
+				},
+				{
+					"name": "Ret contactinformation (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "company",
+									"value": "FTATravel",
+									"type": "text"
+								},
+								{
+									"key": "cvr",
+									"value": "10520509",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Gåseurtvej 16",
+									"type": "text"
+								},
+								{
+									"key": "zipcity",
+									"value": "2700 København",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "Denmark",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "(+45) 1234 5678",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "kontakt@ftatravels.dk",
+									"type": "text"
+								},
+								{
+									"key": "openinghours",
+									"value": "Alle hverdage kl. 10 til 17 eller efter aftale",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5099/contactinformation/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"contactinformation",
+								"admin"
+							]
+						},
+						"description": "Retter i data i about"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "Hent alle contact/beskeder (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/contact/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"contact",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt contact/besked - ud fra ID (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/contact/admin/6255bb29d1643a1c4e99b346",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"contact",
+								"admin",
+								"6255bb29d1643a1c4e99b346"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret contact/besked",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jens Jensen",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "Humlebæk Raceclub",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "xxx@xxxx.dk",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "12121212",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "Her er en ny besked fra en bruger/kunde ....",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5099/contact",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret udvalg contact/besked read-status (ADMIN)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "read",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5099/contact/admin/6255bb29d1643a1c4e99b346",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"contact",
+								"admin",
+								"6255bb29d1643a1c4e99b346"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet contact (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/contact/admin/xxxxxxxxxxxxxxxxxxxxx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"contact",
+								"admin",
+								"xxxxxxxxxxxxxxxxxxxxx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Footer",
+			"item": [
+				{
+					"name": "Hent footer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/footer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"footer"
+							]
+						},
+						"description": "Henter about - der er kun 1 document"
+					},
+					"response": []
+				},
+				{
+					"name": "Ret footer (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "footertext",
+									"value": "2022 - FTA Travels All Rights Reserved",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5099/footer/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"footer",
+								"admin"
+							]
+						},
+						"description": "Retter i data i about"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Newssubscription",
+			"item": [
+				{
+					"name": "Hent alle newssubscription (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/newssubscription/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"newssubscription",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt newssubscription - ud fra ID (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/newssubscription/admin/6255c7356ebf5e6d4fd6133e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"newssubscription",
+								"admin",
+								"6255c7356ebf5e6d4fd6133e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret newssubscription",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman."
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "nytilmelding@testmail.dk",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Jens Jensen",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5099/newssubscription",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"newssubscription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret newssubscription (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman."
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "rettettilmelding@testmail.dk",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Rettet Jens Jensen",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5099/newssubscription/admin/6255c7356ebf5e6d4fd6133e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"newssubscription",
+								"admin",
+								"6255c7356ebf5e6d4fd6133e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet newssubscription - ud fra ID (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/newssubscription/admin/xxxxxxxxxxxxxxxxxxxxx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"newssubscription",
+								"admin",
+								"xxxxxxxxxxxxxxxxxxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet/afmeld newssubscription - ud fra email",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "nytilmelding@testmail.dk",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5099/newssubscription/afmeld",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"newssubscription",
+								"afmeld"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman."
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "gh@ftatravel.dk",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5099/login/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"login",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/login/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"login",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logged in ?",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/login/loggedin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"login",
+								"loggedin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Hent alle user (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/user/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"user",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent user - ud fra ID (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/user/admin/62568342b805db0aa7da2eb0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"user",
+								"admin",
+								"62568342b805db0aa7da2eb0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret user (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman."
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Grace Hopper",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "gh@ftatravel.dk",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "text"
+								},
+								{
+									"key": "admin",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5099/user/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"user",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret user (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman."
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Tim Berners Lee",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "tbl@ftatravel.dk",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "text"
+								},
+								{
+									"key": "admin",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5099/user/admin/62568342b805db0aa7da2eb0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"user",
+								"admin",
+								"62568342b805db0aa7da2eb0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet user (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/user/admin/xxxxxxxxxxxxxxxxxxxxx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"user",
+								"admin",
+								"xxxxxxxxxxxxxxxxxxxxx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tours",
+			"item": [
+				{
+					"name": "Hent alle tours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/tours",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"tours"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent alle tours - teaser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/tours/teaser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"tours",
+								"teaser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt tour - ud fra ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/tours/6255d154799ee021575bab94",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"tours",
+								"6255d154799ee021575bab94"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Søg tours - søger i content, teaser og title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/tours/soeg/søgeordher",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"tours",
+								"soeg",
+								"søgeordher"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret tours (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Lorem Ipsum",
+									"type": "text"
+								},
+								{
+									"key": "teaser",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. ",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "<p> Proin mollis lorem non dolor. In hac habitasse platea dictumst. <br> Nulla ultrices odio. Donec augue. Phasellus dui. <br> Maecenas facilisis nisl vitae nibh. </p> <ul> <li> Proin vel seo est vitae eros pretium dignissim. </li> <li> Aliquam aliquam sodales orci. Suspendisse potenti. </li> <li> Nunc adipiscing euismod arcu. </li> </ul> <p> Quisque facilisis mattis lacus. Fusce bibendum, velit in venenatis viverra, tellus ligula dignissim felis, quis euismod mauris tellus ut urna. Proin scelerisque. Nulla in mi. Integer ac leo. Nunc urna ligula, gravida a, pretium vitae, bibendum nec, ante. Aliquam ullamcorper iaculis lectus. Sed vel dui. Etiam lacinia risus vitae lacus. </p>",
+									"type": "text"
+								},
+								{
+									"key": "roomtype",
+									"value": "<ul><li>Lorem</li><li>Ipsum</li><li>Aliquam ullamcorper</li></ul>",
+									"type": "text"
+								},
+								{
+									"key": "traveldate",
+									"value": "2022-12-31",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "priceminimum",
+									"value": "10000",
+									"type": "text"
+								},
+								{
+									"key": "pricemaximum",
+									"value": "20000",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "galleryimages",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5099/tours/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"tours",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret/send ratings - 1 til 5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5099/tours/rating/6255d154799ee021575bab94/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"tours",
+								"rating",
+								"6255d154799ee021575bab94",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret tours (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Lorem Ipsum",
+									"type": "text"
+								},
+								{
+									"key": "teaser",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. ",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "<p> Proin mollis lorem non dolor. In hac habitasse platea dictumst. <br> Nulla ultrices odio. Donec augue. Phasellus dui. <br> Maecenas facilisis nisl vitae nibh. </p> <ul> <li> Proin vel seo est vitae eros pretium dignissim. </li> <li> Aliquam aliquam sodales orci. Suspendisse potenti. </li> <li> Nunc adipiscing euismod arcu. </li> </ul> <p> Quisque facilisis mattis lacus. Fusce bibendum, velit in venenatis viverra, tellus ligula dignissim felis, quis euismod mauris tellus ut urna. Proin scelerisque. Nulla in mi. Integer ac leo. Nunc urna ligula, gravida a, pretium vitae, bibendum nec, ante. Aliquam ullamcorper iaculis lectus. Sed vel dui. Etiam lacinia risus vitae lacus. </p>",
+									"type": "text"
+								},
+								{
+									"key": "roomtype",
+									"value": "<ul><li>Lorem</li><li>Ipsum</li><li>Aliquam ullamcorper</li></ul>",
+									"type": "text"
+								},
+								{
+									"key": "traveldate",
+									"value": "2022-12-31",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "priceminimum",
+									"value": "10000",
+									"type": "text"
+								},
+								{
+									"key": "pricemaximum",
+									"value": "20000",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "galleryimages",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5099/tours/admin/6255cfb40b7abe9bb00a7014",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"tours",
+								"admin",
+								"6255cfb40b7abe9bb00a7014"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet tours (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5099/tours/admin/xxxxxxxxxxxxxxxxxxxxx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5099",
+							"path": [
+								"tours",
+								"admin",
+								"xxxxxxxxxxxxxxxxxxxxx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
